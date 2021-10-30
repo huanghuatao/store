@@ -128,7 +128,7 @@ print('阶乘之和',Sum)'''#用循环来实现20以内的数的阶乘
 z = 0
 while 1: 
     randint_num = random.randint(0, 100) 
-    min_, max_, integral = 0, 100, 10 
+    min_, max_, integral = 0, 100, 1000
     while 1: 
         z += 1
         try:  
@@ -138,7 +138,7 @@ while 1:
                 integral = 0  
                 break  
             num = int(a) 
-            integral = integral - 1 
+            integral = integral - 100
         except ValueError:  
             print('请输入正确的数字')
             break  
