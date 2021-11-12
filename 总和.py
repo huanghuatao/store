@@ -40,8 +40,8 @@ def add():
 
 #郑雪凤  取款
 def withdraw():
-    id = int(input('请输入账号：'))
-    password = input('请输入密码：')
+    id = input('请输入账号：')
+    password = int(input('请输入密码：'))
     withdraw1 = int(input('请您输入取钱金额:'))
     name1 = bank(id, password, withdraw1)
     if name1 == 1:
@@ -54,13 +54,13 @@ def withdraw():
         print('               取款成功！')
 def bank(id, password, withdraw1):
     if id in Library:
-        if password != Library[id][2]:
+        if password != Library[id]['password']:
             return 2
         else:
-            if withdraw1 <= Library[id][3]:
-                Library[id][3] = Library[id][3] - withdraw1
+            if withdraw1 <= Library[id]['money']:
+                Library[id]['money'] = Library[id]['money'] - withdraw1
                 print('            恭喜您取款成功！！！')
-                print('            您的当前余额为：%0.2f元' % Library[id][3])
+                print('            您的当前余额为：%0.2f元' % Library[id]['money'])
             elif withdraw1 > Library[id][3]:
                 return 3
     else:
@@ -142,18 +142,6 @@ while 1:
     elif num=='3':
         withdraw()
     elif num =='4':
-        '''
-        # 首页界面
-        def front_page():
-            print('**********欢迎来到中国建设银行*********')
-            print('1、开户')
-            print('2、存钱')
-            print('3、取钱')
-            print('4、转账')
-            print('5、查询')
-            print('6、Bye')
-            print('************************************')
-        '''
         transfer()
     elif num=='5':
         cx()
