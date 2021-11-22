@@ -168,7 +168,7 @@ while 1:
         transfer()
     elif num == '5':
         cx()
-    elif num == 6:
+    elif num == '6':
         break
     else:
         print('输入有误,请重新输入')
