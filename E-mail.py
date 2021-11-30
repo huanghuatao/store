@@ -4,7 +4,6 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 
-# 第一种方法
 mail_host = "smtp.qq.com"  # 设置服务器
 mail_user = "2236350998@qq.com"  # 用户名
 mail_pass = "wzkysionostydjeg"  # 口令
